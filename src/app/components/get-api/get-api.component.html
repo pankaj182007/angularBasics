@@ -1,0 +1,13 @@
+
+<p>get-api works!</p>
+<div>
+    <div>
+        <button (click)="getAllUser()">Get Api</button>
+    </div>
+</div>
+
+<ul>
+    <li *ngFor='let user of userList'>id : {{user.id}}
+        name : {{user.name}}
+    </li>
+</ul>
