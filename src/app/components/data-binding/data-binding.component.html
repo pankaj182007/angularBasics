@@ -1,1 +1,53 @@
-<p>data-binding works!</p>
+<div class="row">
+    <div class="col-3">
+       <h3>one way from .ts to .html</h3>
+       <h4>interpolation</h4>
+       <h5>Name = {{name}}</h5> 
+       <h5>Age = {{age}}</h5>
+       <input type="text" value="{{name}}" placeholder="enter text">
+    </div>
+    <div class="col-3">
+        <h3>Property binding</h3>
+        <input type="text" [value]="name" placeholder="enter text">
+    </div>
+    <div class="col-3">
+        <h3>one way from .html to .ts</h3>
+        <button class="btn btn-success" (click)="msgAlert()">Show Massege</button>
+        <button class="btn btn-success" (click)="changeName()">Change Name</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <h3>Two way Data binding</h3>
+        <input type="text" [(ngModel)]="name" placeholder="enter text">
+
+        <select [(ngModel)]="states">
+            <option value="">Select</option>
+            <option value="Delhi">Delhi</option>
+            <option value="U.P">U.P</option>
+            <option value="M.P">M.P</option>
+            <option value="Bihar">Bihar</option>
+        </select>
+       
+    </div>
+    <div class="col-4">
+       
+    </div>
+    <div class="col-4">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <h3>signal</h3>
+        <h2>{{myName()}}</h2>
+    </div>
+    <div class="col-3">
+
+    </div>
+    <div class="col-3">
+
+    </div>
+</div>

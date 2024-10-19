@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor } from '@angular/common';
-import {GetApiComponent} from './components/get-api/get-api.component'
+import {GetApiComponent} from './components/get-api/get-api.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NgFor,GetApiComponent],
+  imports: [RouterOutlet,NgFor,GetApiComponent,DataBindingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
