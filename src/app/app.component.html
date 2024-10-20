@@ -1,9 +1,54 @@
 
-<ul >
+<!-- <ul >
   <li *ngFor="let item of titles">{{item}}</li>
   <li>
     <app-get-api></app-get-api>
     <app-data-binding></app-data-binding>
     <app-structrual-directive></app-structrual-directive>
+    <app-attribute-directive></app-attribute-directive>
   </li>
-</ul>
+</ul> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="appDataBinding">Data Binding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="structrualDirective">Structrual Directive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="attributeDirective">Attribute Directive</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            Anguler Topics
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="dropdown-item" routerLink="appDataBinding">Data Binding</a></li>
+            <li><a class="dropdown-item" routerLink="structrualDirective">Structrual Directive</a></li>
+            
+            <li><a class="dropdown-item" routerLink="attributeDirective">Attribute Directive</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

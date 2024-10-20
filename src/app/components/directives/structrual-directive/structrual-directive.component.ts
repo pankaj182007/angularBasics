@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {  Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-structrual-directive',
@@ -10,11 +12,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './structrual-directive.component.css'
 })
 export class StructrualDirectiveComponent {
-  isDiv1Visiable:boolean=false;
-  isDiv2Visiable:boolean=false;
+  isDiv1Visiable:boolean=true;
+  isDiv2Visiable:boolean=true;
   num1:String="";
   num2:String="";
-  isActive:boolean=false;
+  isActive:boolean=true;
+
+  constructor(private router:Router){}
+
+  navigateToAttribute(){
+  this.router.navigateByUrl("attributeDirective");
+  //window.open("attributeDirective");
+  }
 
   showDiv1(){
     this.isDiv1Visiable=true
