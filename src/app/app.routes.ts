@@ -4,6 +4,7 @@ import { StructrualDirectiveComponent } from './components/directives/structrual
 import { AttributeDirectiveComponent } from './components/directives/attribute-directive/attribute-directive.component';
 import { GetApiComponent } from './components/get-api/get-api.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
 
 export const routes: Routes = [
 
@@ -11,6 +12,8 @@ export const routes: Routes = [
     {path: "structrualDirective",component :StructrualDirectiveComponent},
     {path: "attributeDirective",component :AttributeDirectiveComponent},
     {path: "getApiCall",component :GetApiComponent},
-    {path: "pipe",component :PipeComponent}
+    {path: "pipe",component :PipeComponent},
+    {path: "templateForm",component:TemplateFormsComponent}
+
 
 ];
