@@ -5,6 +5,7 @@ import { AttributeDirectiveComponent } from './components/directives/attribute-d
 import { GetApiComponent } from './components/get-api/get-api.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
 
@@ -13,7 +14,8 @@ export const routes: Routes = [
     {path: "attributeDirective",component :AttributeDirectiveComponent},
     {path: "getApiCall",component :GetApiComponent},
     {path: "pipe",component :PipeComponent},
-    {path: "templateForm",component:TemplateFormsComponent}
+    {path: "templateForm",component:TemplateFormsComponent},
+    {path: "reactiveForm",component:ReactiveFormComponent}
 
 
 ];

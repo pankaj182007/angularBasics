@@ -1,0 +1,92 @@
+<div class=" bg-warning rounded">
+    <h1>Reactive Form</h1>
+   <p>Creat Form & Validation</p></div>
+
+<form class="row g-3 needs-validation" novalidate [formGroup]="studentForm" >
+   <div class="col-md-4">
+     <label for="validationCustom01" class="form-label" >First name</label>
+     <input type="text" class="form-control" id="validationCustom01"  formControlName="firstName" >
+     <div class="text-danger">
+      @if (studentForm.controls["firstName"].touched &&studentForm.controls["firstName"].errors?.["required"]) {        
+          <span>This is required</span>         
+      }@else if (studentForm.controls["firstName"].touched &&studentForm.controls["firstName"].errors?.['minlength']) {        
+            <span>First name shoutd not be less than 3 letter</span>           
+      }
+      </div>
+     
+   </div>
+   <div class="col-md-4">
+     <label for="validationCustom02" class="form-label" >Last name</label>
+     <input type="text" class="form-control" id="validationCustom02"  formControlName="lastName" >
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+   </div>
+   <div class="col-md-4">
+     <label for="validationCustomUsername" class="form-label" >Username</label>
+     <div class="input-group has-validation">
+       <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" formControlName="userName">
+       <div class="text-danger">
+        @if (studentForm.controls["userName"].touched &&studentForm.controls["userName"].errors?.["email"]) {        
+            <span>Please enter valid Email</span>         
+        }
+        </div>
+     </div>
+   </div>
+   <div class="col-md-6">
+     <label for="validationCustom03" class="form-label" >City</label>
+     <input type="text" class="form-control" id="validationCustom03" formControlName="city">
+     <div class="invalid-feedback">
+       Please provide a valid city.
+     </div>
+   </div>
+   <div class="col-md-3">
+     <label for="validationCustom04" class="form-label" >State</label>
+     <select class="form-select" id="validationCustom04"  formControlName="state">
+       <option selected disabled value="">Choose...</option>
+       <option value="Maharashtra">Maharashtra</option>
+       <option value="Goa"Goa>Goa</option>
+       <option value="Panjab">panjab</option>
+       <option value="Uttar Pradesh">Uttar Pradesh</option>
+       <option value="Bihar">Bihar</option>
+     </select>
+     <div class="invalid-feedback">
+       Please select a valid state.
+     </div>
+   </div>
+   <div class="col-md-3">
+     <label for="validationCustom05" class="form-label" >Zip</label>
+     <input type="text" class="form-control" id="validationCustom05"  formControlName="zip">
+     <div class="invalid-feedback">
+       Please provide a valid zip.
+     </div>
+   </div>
+   <div class="col-12">
+     <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" formControlName="isTermAscepted" >
+       <label class="form-check-label" for="invalidCheck">
+         Agree to terms and conditions
+       </label>
+       <div class="invalid-feedback">
+         You must agree before submitting.
+       </div>
+     </div>
+   </div>
+   <div class="col-md-2">
+       <button class="btn btn-warning"  type="button" (click)="reset()" >Reset form</button>
+   </div>
+   <div class="col-md-2">
+     <button class="btn btn-primary"  type="submit" [disabled]="studentForm.invalid" (click)="onSave()">Submit form</button>
+   </div>
+ </form>
+
+ @if(saveData){
+  <div class="m-2 p-2 bg-warning rounded">{{saveData|json}}</div>
+
+}
+
+ 
+ 
+
+
