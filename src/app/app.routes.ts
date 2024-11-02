@@ -15,7 +15,8 @@ export const routes: Routes = [
     {path: "getApiCall",component :GetApiComponent},
     {path: "pipe",component :PipeComponent},
     {path: "templateForm",component:TemplateFormsComponent},
-    {path: "reactiveForm",component:ReactiveFormComponent}
+    {path: "reactiveForm",component:ReactiveFormComponent},
+    {path: "getApiCall",component:GetApiComponent}
 
 
 ];
